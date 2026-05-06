@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wendy McLarty Coaching — Lead The Change</title>
+<link href="{{\*{HYPERLINK "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap"}}{https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap}}" rel="stylesheet">
+<style>
+:root {
+--cream: #faf7f2;
+--linen: #f0ebe0;
+--tan: #c9a97a;
+--brown: #3d2e1e;
+--mid: #6b5540;
+--light: #a0907e;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Lato',sans-serif; background:var(--cream); color:var(--brown); overflow-x:hidden; }
+
+nav {
+position:fixed; top:0; left:0; right:0; z-index:200;
+display:flex; justify-content:space-between; align-items:center;
+padding:1.1rem 4rem;
+background:rgba(250,247,242,0.97);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(201,169,122,0.15);
+transition:box-shadow 0.3s;
+}
+.nav-brand { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--brown); text-decoration:none; letter-spacing:0.04em; cursor:pointer; }
+.nav-links { display:flex; gap:2rem; list-style:none; align-items:center; }
+.nav-links a { font-size:0.76rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color 0.2s; cursor:pointer; }
+.nav-links a:hover, .nav-links a.active { color:var(--tan); }
+.nav-cta { background:var(--brown) !important; color:var(--cream) !important; padding:0.5rem 1.3rem !important; }
+.nav-cta:hover { background:var(--tan) !important; }
+
+.page { display:none; }
+.page.active { display:block; }
+
+.label { font-size:0.68rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--tan); display:block; margin-bottom:0.7rem; }
+
+.btn { display:inline-block; padding:0.8rem 2rem; font-family:'Lato',sans-serif; font-size:0.76rem; letter-spacing:0.14em; text-transform:uppercase; border:none; cursor:pointer; transition:all 0.3s; border-radius:2px; text-decoration:none; }
+.btn-dark { background:var(--brown); color:var(--cream); }
+.btn-dark:hover { background:var(--tan); }
+.btn-outline { background:transparent; color:var(--tan); border:1.5px solid var(--tan); }
+.btn-outline:hover { background:var(--tan); color:#fff; }
+
+.reveal { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease, transform 0.7s ease; }
+.reveal.on { opacity:1; transform:translateY(0); }
+
+footer {
+background:var(--brown); color:rgba(250,247,242,0.5);
+padding:2rem 4rem;
+display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+}
+.footer-brand { font-family:'Cormorant Garamond',serif; font-size:1rem; color:rgba(250,247,242,0.85); }
+.footer-tagline { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--tan); margin-top:0.2rem; }
+.fnav { display:flex; gap:1.5rem; }
+.fnav a { font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(250,247,242,0.4); text-decoration:none; transition:color 0.2s; cursor:pointer; }
+.fnav a:hover { color:var(--tan); }
+
+@media(max-width:768px) {
+nav { padding:1rem 1.5rem; }
+.nav-links { display:none; }
+.two-col { grid-template-columns:1fr !important; }
+.hero-grid { grid-template-columns:1fr !important; }
+.pad { padding:3rem 1.5rem !important; }
+footer { flex-direction:column; text-align:center; padding:1.5rem; }
+.fnav { justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+<span class="nav-brand" onclick="go('home')">Wendy McLarty Coaching</span>
+<ul class="nav-links">
+<li><a onclick="go('home')" data-p="home">Home</a></li>
+<li><a onclick="go('about')" data-p="about">About</a></li>
+<li><a onclick="go('services')" data-p="services">Services</a></li>
+<li><a onclick="go('contact')" data-p="contact" class="nav-cta">Book Today</a></li>
+</ul>
+</nav>
+
+<!-- ============ HOME ============ -->
+<div id="home" class="page">
+
+<!-- HERO -->
+<section style="padding-top:72px; display:grid; grid-template-columns:1.05fr 1fr; min-height:94vh;" class="hero-grid">
+<div style="display:flex; flex-direction:column; justify-content:center; padding:4rem 3rem 4rem 5rem;">
+<span class="label" style="animation:fadeUp 0.6s 0.1s both;">Life &amp; Leadership Coach</span>
+<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,5.5vw,5rem); font-weight:300; line-height:1.08; margin-bottom:1.2rem; animation:fadeUp 0.7s 0.25s both;">
+Lead<br>The <em style="color:var(--tan);">Change</em>
+</h1>
+<p style="font-size:1rem; font-weight:300; color:var(--mid); line-height:1.85; max-width:400px; margin-bottom:2rem; animation:fadeUp 0.7s 0.4s both;">
+Personalized coaching for professionals ready to unlock their potential, build momentum, and lead with clarity.
+</p>
+<div style="display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.55s both;">
+<button class="btn btn-dark" onclick="go('contact')">Book a Free Consultation</button>
+<button class="btn btn-outline" onclick="go('services')">View Programs</button>
+</div>
+</div>
+<div style="position:relative; overflow:hidden;">
+<img src="Wendy_.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block; animation:fadeIn 1s 0.3s both;">
+<div style="position:absolute; inset:0; background:linear-gradient(to right, var(--cream) 0%, transparent 18%);"></div>
+</div>
+</section>
+
+<!-- BAND -->
+<section style="background:var(--brown); padding:4.5rem 5rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;" class="two-col pad">
+<div class="reveal">
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.5vw,3rem); font-weight:300; color:var(--cream); line-height:1.2;">
+Welcome to your journey<br>of <em style="color:var(--tan);">transformation</em>
+</h2>
+</div>
+<div class="reveal">
+<p style="font-size:0.94rem; font-weight:300; color:rgba(250,247,242,0.72); line-height:1.85; margin-bottom:1.5rem;">
+Whether you're navigating a career pivot, stepping into a leadership role, or ready to break through what's been holding you back — this is where it starts.
+</p>
+<button class="btn btn-outline" style="border-color:rgba(201,169,122,0.6); color:var(--tan);" onclick="go('about')">Learn More About Wendy</button>
+</div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section style="padding:6rem 5rem; display:grid; grid-template-columns:1fr 1.2fr; gap:5rem; align-items:center; max-width:1200px; margin:0 auto;" class="two-col pad">
+<div style="position:relative;" class="reveal">
+<img src="plant.jpeg" style="width:100%; border-radius:3px; box-shadow:0 12px 50px rgba(61,46,30,0.15); object-fit:cover; max-height:520px; object-position:top center; display:block;">
+<div style="position:absolute; bottom:-1rem; right:-1rem; width:50%; aspect-ratio:1; border:2px solid var(--tan); z-index:-1; border-radius:2px;"></div>
+</div>
+<div class="reveal">
+<span class="label">About Wendy</span>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; line-height:1.2; margin-bottom:1.2rem;">
+Strategic. Compassionate.<br><em>Experienced.</em>
+</h2>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.85; margin-bottom:1rem;">
+Wendy McLarty is a licensed social worker turned HR executive bringing a rare combination of psychological insight and business acumen to her coaching. With over 16 years in social services and 12 years in HR leadership, she combines strategy with genuine compassion.
+</p>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.85; margin-bottom:1.8rem;">
+A wife, mother of three, and proud grandmother, she brings authenticity and hard-won wisdom to every coaching relationship.
+</p>
+<button class="btn btn-dark" onclick="go('about')">Read Full Bio</button>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section style="background:var(--linen); padding:5rem;" class="pad">
+<div style="max-width:760px; margin:0 auto; text-align:center;" class="reveal">
+<span class="label">Client Story</span>
+<blockquote style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.1rem,2vw,1.35rem); font-style:italic; font-weight:300; color:var(--brown); line-height:1.8; margin-bottom:1.5rem;">
+"I have known Wendy in both a professional and personal nature for many years. She has offered her wisdom and thoughtful suggestions to help me navigate life's challenges. She has a rare ability to help you maximize your potential while sorting out your priorities. I can highly recommend Wendy as a life coach."
+</blockquote>
+<div style="width:40px; height:1px; background:var(--tan); margin:0 auto 1rem;"></div>
+<div style="font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--tan);">Verified Client</div>
+</div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section style="padding:6rem 5rem; text-align:center;" class="pad">
+<div class="reveal" style="margin-bottom:3rem;">
+<span class="label">Programs</span>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3.5vw,3rem); font-weight:300;">Two paths. One <em style="color:var(--tan);">destination.</em></h2>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:780px; margin:0 auto 2.5rem;" class="two-col reveal">
+<div style="background:var(--linen); padding:2rem; border-radius:3px; text-align:left; border:1px solid rgba(201,169,122,0.2);">
+<div style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--tan);">$397</div>
+<div style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--light); margin-bottom:0.5rem;">per month</div>
+<div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; margin-bottom:0.4rem;">Growth</div>
+<div style="font-size:0.82rem; color:var(--mid); font-style:italic; line-height:1.5;">For leaders who want steady progress without overwhelm.</div>
+</div>
+<div style="background:var(--brown); padding:2rem; border-radius:3px; text-align:left;">
+<div style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--tan);">$797</div>
+<div style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(250,247,242,0.4); margin-bottom:0.5rem;">per month</div>
+<div style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; color:var(--cream); margin-bottom:0.4rem;">Evolve</div>
+<div style="font-size:0.82rem; color:rgba(250,247,242,0.65); font-style:italic; line-height:1.5;">For those ready to accelerate transformation.</div>
+</div>
+</div>
+<button class="btn btn-dark reveal" onclick="go('services')">See Full Program Details</button>
+</section>
+
+<footer>
+<div><div class="footer-brand">Wendy McLarty Coaching</div><div class="footer-tagline">Lead The Change</div></div>
+<div class="fnav"><a onclick="go('home')">Home</a><a onclick="go('about')">About</a><a onclick="go('services')">Services</a><a onclick="go('contact')">Contact</a></div>
+<div style="font-size:0.68rem;"> 2026 Wendy McLarty Coaching</div>
+</footer>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div id="about" class="page">
+
+<section style="padding-top:72px; background:var(--linen); padding-bottom:0; overflow:hidden; min-height:620px; position:relative;">
+<div style="max-width:1200px; margin:0 auto; padding:5rem 5rem 0; display:grid; grid-template-columns:1.2fr 1fr; gap:5rem; align-items:center; position:relative; z-index:2;" class="hero-grid pad">
+<div class="reveal">
+<span class="label">About</span>
+<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,5vw,4.5rem); font-weight:300; line-height:1.08; margin-bottom:1.2rem;">
+Hi, I'm Wendy —<br><em style="color:var(--tan);">People Person.</em>
+</h1>
+<p style="font-size:1rem; font-weight:300; color:var(--mid); line-height:1.85; max-width:440px;">
+A licensed social worker, HR executive, and life coach with 25+ years helping people and organizations thrive.
+</p>
+</div>
+<div class="reveal" style="position:relative; height:520px; overflow:hidden;">
+<img src="people person.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;">
+<div style="position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to bottom, transparent 0%, var(--linen) 100%); pointer-events:none;"></div>
+<div style="position:absolute; bottom:0; left:0; right:0; height:160px; background:linear-gradient(to bottom, transparent, var(--linen));"></div>
+</div>
+</div>
+</section>
+
+<section style="padding:6rem 5rem; max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;" class="two-col pad">
+<div class="reveal">
+<span class="label">My Story</span>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:300; line-height:1.2; margin-bottom:1.5rem;">
+Blending strategy<br>with <em>compassion</em>
+</h2>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.9; margin-bottom:1rem;">
+Wendy McLarty is a licensed social worker turned HR executive serving as Vice President of Human Resources — bringing a rare combination of psychological insight and business acumen to organizational leadership.
+</p>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.9; margin-bottom:1rem;">
+With over 19 years in social services and 14 years in HR management, she has established herself as a distinctive voice in workplace culture transformation — particularly as a female executive in male-dominated industries.
+</p>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.9; margin-bottom:1rem;">
+She specializes in Leadership Training, Workplace Culture Development, Team Building, and Crisis Management.
+</p>
+<p style="font-size:0.93rem; font-weight:300; color:var(--mid); line-height:1.9;">
+A wife, mother of three, and grandmother, she brings authentic understanding of what it means to balance professional ambition with personal growth.
+</p>
+<div style="display:flex; gap:2.5rem; margin-top:2.5rem; padding-top:2rem; border-top:1px solid rgba(201,169,122,0.3);">
+<div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem;">19+</div><div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--light); margin-top:0.2rem;">Years in Social Work</div></div>
+<div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem;">14+</div><div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--light); margin-top:0.2rem;">Years in HR</div></div>
+<div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem;">VP</div><div style="font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--light); margin-top:0.2rem;">Human Resources</div></div>
+</div>
+</div>
+<div class="reveal" style="display:flex; flex-direction:column; gap:1.5rem;">
+<div style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 24px 60px rgba(61,46,30,0.13);">
+<img src="arms.jpeg" style="width:100%; border-radius:12px; box-shadow:0 20px 60px rgba(61,46,30,0.12); object-fit:cover; height:480px; object-position:center top; display:block;">
+<div style="position:absolute; bottom:0; left:0; right:0; height:120px; background:linear-gradient(to bottom, transparent, rgba(250,247,242,0.4));"></div>
+</div>
+
+</div>
+</section>
+
+<section style="background:var(--brown); padding:5rem;" class="pad">
+<div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;" class="two-col">
+<div class="reveal">
+<img src="writing.jpeg" style="width:100%; border-radius:3px; object-fit:cover; max-height:450px; object-position:top; display:block; box-shadow:0 12px 50px rgba(0,0,0,0.3);">
+</div>
+<div class="reveal">
+<span class="label">Beyond the Office</span>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:300; color:var(--cream); line-height:1.2; margin-bottom:1.2rem;">
+Life outside<br><em style="color:var(--tan);">the boardroom</em>
+</h2>
+<p style="font-size:0.93rem; font-weight:300; color:rgba(250,247,242,0.72); line-height:1.9; margin-bottom:1rem;">
+Outside her professional life, Wendy is a devoted wife, mother of three, and grandmother who believes balance is the foundation of great leadership. Her commitment to work-life integration isn't just advice — it's how she lives.
+</p>
+<p style="font-size:0.93rem; font-weight:300; color:rgba(250,247,242,0.72); line-height:1.9;">
+She loves self-help books, camping, boating, traveling, and soaking up the summer sun with her family — passions that fuel the vibrant, optimistic energy she brings to every coaching relationship.
+</p>
+</div>
+</div>
+</section>
+
+<section style="background:var(--linen); padding:5rem; text-align:center;" class="pad">
+<div style="max-width:740px; margin:0 auto;" class="reveal">
+<span class="label">What Clients Say</span>
+<blockquote style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.1rem,2vw,1.3rem); font-style:italic; font-weight:300; color:var(--brown); line-height:1.8; margin-bottom:1.5rem;">
+"I think we all can agree that life is filled with challenges. We often wish for someone who could listen and offer skilled guidance on how to make the most of this short life we have. I have known Wendy in both a professional and personal nature for many years. She has offered her wisdom and thoughtful suggestions to help me navigate life's challenges. I can highly recommend Wendy as a life coach."
+</blockquote>
+<div style="width:40px; height:1px; background:var(--tan); margin:0 auto 1rem;"></div>
+<div style="font-size:0.72rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--tan);">Verified Client</div>
+</div>
+</section>
+
+<section style="padding:4rem 5rem; text-align:center;" class="pad reveal">
+<button class="btn btn-dark" onclick="go('contact')">Book a Free Consultation</button>
+</section>
+
+<footer>
+<div><div class="footer-brand">Wendy McLarty Coaching</div><div class="footer-tagline">Lead The Change</div></div>
+<div class="fnav"><a onclick="go('home')">Home</a><a onclick="go('about')">About</a><a onclick="go('services')">Services</a><a onclick="go('contact')">Contact</a></div>
+<div style="font-size:0.68rem;"> 2026 Wendy McLarty Coaching</div>
+</footer>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<div id="services" class="page">
+
+<!-- HERO -->
+<section style="padding-top:72px; position:relative; height:440px; overflow:hidden;">
+<img src="B&W.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block; filter:brightness(0.72);">
+<div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(61,46,30,0.2), rgba(61,46,30,0.65));"></div>
+<div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem;">
+<span style="font-size:0.68rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(201,169,122,0.9); display:block; margin-bottom:0.8rem;">Coaching Programs</span>
+<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,5vw,4.5rem); font-weight:300; color:#fff; line-height:1.1;">
+Choose your path to <em style="color:#c9a97a;">growth</em>
+</h1>
+<p style="font-size:0.95rem; font-weight:300; color:rgba(255,255,255,0.8); margin-top:1rem; max-width:460px; line-height:1.7;">
+Two programs designed to meet you where you are. Join when you're ready. Stay as long as you like.
+</p>
+</div>
+</section>
+
+<!-- GROWTH -->
+<section style="padding:6rem 5rem; max-width:1000px; margin:0 auto;" class="pad">
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;" class="two-col reveal">
+<div>
+<div style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--tan); margin-bottom:0.8rem;">Program 01</div>
+<div style="font-family:'Cormorant Garamond',serif; font-size:3.2rem; color:var(--tan); font-weight:300; line-height:1;">$397</div>
+<div style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--light); margin-bottom:1rem;">per month</div>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; margin-bottom:0.6rem;">Growth</h2>
+<p style="font-size:0.9rem; font-style:italic; color:var(--mid); margin-bottom:1.5rem; line-height:1.6; border-left:2px solid var(--tan); padding-left:1rem;">For leaders who want steady progress without overwhelm.</p>
+<div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>2 private coaching sessions per month (every other week)</div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Focused, strategic conversations to tackle challenges and build momentum</div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Action steps after each session to keep you on track</div>
+<div style="padding:0.7rem 0; font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Ideal for accountability and clarity while integrating change</div>
+</div>
+<button class="btn btn-dark" style="margin-top:2rem;" onclick="go('contact')">Get Started</button>
+</div>
+<div style="width:100%; aspect-ratio:3/4; overflow:hidden; border-radius:3px; box-shadow:0 16px 60px rgba(61,46,30,0.16);">
+<img src="W stand.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+</div>
+</div>
+</section>
+
+<div style="max-width:700px; margin:0 auto; height:1px; background:linear-gradient(to right, transparent, rgba(201,169,122,0.4), transparent);"></div>
+
+<!-- EVOLVE -->
+<section style="padding:6rem 5rem; max-width:1000px; margin:0 auto;" class="pad">
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;" class="two-col reveal">
+<div style="width:100%; aspect-ratio:3/4; overflow:hidden; border-radius:3px; box-shadow:0 16px 60px rgba(61,46,30,0.16);">
+<img src="plant.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block; transition:transform 0.6s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+</div>
+<div>
+<div style="font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--tan); margin-bottom:0.8rem;">Program 02</div>
+<div style="font-family:'Cormorant Garamond',serif; font-size:3.2rem; color:var(--tan); font-weight:300; line-height:1;">$797</div>
+<div style="font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--light); margin-bottom:1rem;">per month</div>
+<h2 style="font-family:'Cormorant Garamond',serif; font-size:2.6rem; font-weight:300; margin-bottom:0.6rem;">Evolve</h2>
+<p style="font-size:0.9rem; font-style:italic; color:var(--mid); margin-bottom:1.5rem; line-height:1.6; border-left:2px solid var(--tan); padding-left:1rem;">For those ready to accelerate transformation and stay deeply supported.</p>
+<div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>1 private coaching session every week</div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Text support between sessions for real-time feedback and encouragement</div>
+<div style="padding:0.7rem 0; border-bottom:1px solid rgba(201,169,122,0.2); font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Deeper, faster breakthroughs through consistent weekly contact</div>
+<div style="padding:0.7rem 0; font-size:0.87rem; font-weight:300; color:var(--mid); display:flex; gap:0.8rem;"><span style="color:var(--tan); flex-shrink:0;">—</span>Perfect for big goals, rapid growth, or high-pressure leadership seasons</div>
+</div>
+<button class="btn btn-dark" style="margin-top:2rem;" onclick="go('contact')">Get Started</button>
+</div>
+</div>
+</section>
+
+<section style="background:var(--linen); padding:2.5rem 5rem; text-align:center;" class="pad reveal">
+<p style="font-size:0.85rem; font-style:italic; color:var(--light);">You can upgrade, downgrade, or pause at any time. Your journey, your pace.</p>
+<p style="font-size:0.85rem; font-weight:300; color:var(--mid); margin-top:0.5rem;">Not sure which is right for you? <button onclick="go('contact')" style="background:none;border:none;color:var(--tan);cursor:pointer;font-size:0.85rem;text-decoration:underline;font-family:'Lato',sans-serif;">Book a free intro call.</button></p>
+</section>
+
+<footer>
+<div><div class="footer-brand">Wendy McLarty Coaching</div><div class="footer-tagline">Lead The Change</div></div>
+<div class="fnav"><a onclick="go('home')">Home</a><a onclick="go('about')">About</a><a onclick="go('services')">Services</a><a onclick="go('contact')">Contact</a></div>
+<div style="font-size:0.68rem;"> 2026 Wendy McLarty Coaching</div>
+</footer>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div id="contact" class="page">
+
+<section style="padding-top:72px; min-height:100vh; display:grid; grid-template-columns:1fr 1fr;" class="hero-grid">
+<div style="position:relative; overflow:hidden; min-height:600px;">
+<img src="people person.jpeg" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;">
+<div style="position:absolute; inset:0; background:linear-gradient(to right, transparent 65%, var(--cream) 100%);"></div>
+<div style="position:absolute; bottom:3rem; left:2.5rem; right:2.5rem;">
+<div style="background:rgba(250,247,242,0.96); padding:1.8rem; border-radius:3px; backdrop-filter:blur(8px);">
+<p style="font-family:'Cormorant Garamond',serif; font-size:1rem; font-style:italic; color:var(--brown); line-height:1.6; margin-bottom:1rem;">
+"Ready to take the first step? Let's have an honest conversation about your goals."
+</p>
+<div style="display:flex; flex-direction:column; gap:0.4rem;">
+<a href="{{\*{HYPERLINK "tel:7124903630"}}{tel:7124903630}}" style="font-size:0.83rem; color:var(--mid); text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><span style="color:var(--tan);">
+
+</span>712-490-3630</a>
+<a href="{{\*{HYPERLINK "https://wendymclartycoaching.com/cdn-cgi/l/email-protection#c9beaca7adb089beaca7adb0a4aaa5a8bbbdb0aaa6a8aaa1a0a7aee7aaa6a4"}}{/cdn-cgi/l/email-protection#c9beaca7adb089beaca7adb0a4aaa5a8bbbdb0aaa6a8aaa1a0a7aee7aaa6a4}}" style="font-size:0.83rem; color:var(--mid); text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><span style="color:var(--tan);">
+
+</span><span class="__cf_email__" data-cfemail="7b0c1e151f023b0c1e151f021618171a090f0218141a181312151c55181416">[email&#160;protected]</span></a>
+</div>
+</div>
+</div>
+</div>
+
+<div style="padding:5.5rem 3.5rem; display:flex; flex-direction:column; justify-content:center;" class="reveal">
+<span class="label">Get In Touch</span>
+<h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3rem); font-weight:300; line-height:1.15; margin-bottom:0.8rem;">
+Let's Grow <em style="color:var(--tan);">Together</em>
+</h1>
+<p style="font-size:0.9rem; font-weight:300; color:var(--mid); line-height:1.8; margin-bottom:0.5rem;">
+Reach out to schedule a complimentary 30-minute consultation — no commitment required.
+</p>
+<div style="background:var(--linen); border-left:3px solid var(--tan); padding:0.7rem 1rem; margin-bottom:1.5rem; font-size:0.82rem; font-style:italic; color:var(--brown);">
+
+ Free 30-minute intro call — let's find your right fit
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:0.8rem;">
+<div><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">First Name</label><input type="text" placeholder="First name" style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown);"></div>
+<div><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">Last Name</label><input type="text" placeholder="Last name" style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown);"></div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:0.8rem;">
+<div><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">Email</label><input type="email" placeholder="your@email.com" style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown);"></div>
+<div><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">Phone</label><input type="tel" placeholder="555-555-5555" style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown);"></div>
+</div>
+<div style="margin-bottom:0.8rem;"><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">I'm Interested In</label><select style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown); appearance:none;"><option>Growth — $397/month</option><option>Evolve — $797/month</option><option>Not sure yet</option></select></div>
+<div style="margin-bottom:1rem;"><label style="display:block; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--light); margin-bottom:0.35rem;">Message</label><textarea placeholder="Tell me a bit about where you're at..." style="width:100%; padding:0.72rem 0.9rem; border:1px solid rgba(201,169,122,0.3); background:#fff; font-family:'Lato',sans-serif; font-size:0.87rem; font-weight:300; outline:none; border-radius:2px; color:var(--brown); min-height:100px; resize:vertical;"></textarea></div>
+<button class="btn btn-dark" style="width:100%; padding:1rem;">Send Message</button>
+<p style="font-size:0.73rem; font-style:italic; color:var(--light); text-align:center; margin-top:0.7rem;">I'll be in touch within 24 hours.</p>
+</div>
+</section>
+
+<footer>
+<div><div class="footer-brand">Wendy McLarty Coaching</div><div class="footer-tagline">Lead The Change</div></div>
+<div class="fnav"><a onclick="go('home')">Home</a><a onclick="go('about')">About</a><a onclick="go('services')">Services</a><a onclick="go('contact')">Contact</a></div>
+<div style="font-size:0.68rem;"> 2026 Wendy McLarty Coaching</div>
+</footer>
+</div>
+
+<style>
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+</style>
+
+<script>
+function go(id) {
+document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('[data-p]').forEach(a => a.classList.remove('active'));
+var page = document.getElementById(id);
+if(page) { page.classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); setTimeout(reveals, 120); }
+var link = document.querySelector('[data-p="'+id+'"]');
+if(link) link.classList.add('active');
+}
+
+function reveals() {
+var obs = new IntersectionObserver(function(entries) {
+entries.forEach(function(e,i) {
+if(e.isIntersecting) { setTimeout(function(){ e.target.classList.add('on'); }, i*100); obs.unobserve(e.target); }
+});
+}, {threshold:0.1});
+document.querySelectorAll('.page.active .reveal').forEach(function(el) {
+if(!el.classList.contains('on')) obs.observe(el);
+});
+}
+
+window.addEventListener('scroll', function() {
+document.getElementById('nav').style.boxShadow = window.scrollY > 40 ? '0 2px 24px rgba(61,46,30,0.08)' : 'none';
+});
+
+document.addEventListener('DOMContentLoaded', function() { go('home'); });
+</script>
+</body>
+</html>
